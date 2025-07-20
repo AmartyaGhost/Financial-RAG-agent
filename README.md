@@ -23,7 +23,7 @@ A powerful **Retrieval-Augmented Generation (RAG)** assistant built with **LangC
 
 ## 🧠 Architecture Overview
 
-```mermaid
+
 flowchart TD
     A[📁 PDF Upload] --> B[🧾 PyMuPDF: Extract Text]
     B --> C[🔪 Split into Chunks (Recursive)]
