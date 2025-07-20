@@ -25,12 +25,12 @@ A powerful **Retrieval-Augmented Generation (RAG)** assistant built with **LangC
 
 ```mermaid
 flowchart TD
-    A[📁 PDF Upload] --> B[🧾 PyMuPDF: Extract Text]
-    B --> C[🔪 Split into Chunks (Recursive)]
-    C --> D[📌 Embedding with BGE-small]
-    D --> E[📚 Store in FAISS Vector DB]
-    F[❓ User Question] --> G[📍 Embed Query]
-    G --> H[🔎 Retrieve Top 5 Chunks]
-    H --> I[🧠 Groq LLM (LLaMA3-8B)]
-    I --> J[📝 Final Answer]
-    J --> K[🖥️ Display in Gradio UI]
+    A[PDF Upload] --> B[Extract Text with PyMuPDF]
+    B --> C[Split into Chunks]
+    C --> D[Embed with BGE-small]
+    D --> E[Store in FAISS Vector DB]
+    F[User Question] --> G[Embed Question]
+    G --> H[Retrieve Top 5 Chunks from FAISS]
+    H --> I[Groq LLaMA3-8B LLM]
+    I --> J[Generate Final Answer]
+    J --> K[Display in Gradio UI]
